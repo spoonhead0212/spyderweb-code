@@ -240,6 +240,17 @@ body {
     color: #264860;
 }
 
+.paging {
+    position: absolute;
+    bottom: 0;
+}
+
+.paging li {
+    list-style: none;
+}
+
+
+
 @media screen and (max-width: 800px){
     .cost-wrap {
         width: 90%;
