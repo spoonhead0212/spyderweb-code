@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email 2a</title>
+    <!-- style begins -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+        :root {
+            --inter: 'Inter', sans-serif;
+            --comforta: 'Comfortaa', cursive;
+            --font-20: 20px;
+            --font-14: 14px;
+            --white-clr: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--inter)
+        }
+
+        .content-body {
+            width: 100%;
+            padding-inline: 5px;
+        }
+
+        .all {
+            width: 100vw;
+            padding-block: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .content-wrap {
+            width: min(90%, 556px);
+        }
+
+        .ai-logo {
+            width: 157px;
+            padding-left: 5px;
+            display: inline-block;
+        }
+
+        .mail-hero {
+            margin: 2rem 0 1rem 0;
+            width: 100%;
+            position: relative;
+        }
+
+        .hero-bg {
+            width: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-cont {
+            text-align: center;
+            position: absolute;
+            top: 50%;  
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            width: 230px;
+        }
+
+        .hero-cont h1 {
+            font-family: var(--comforta);
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--white-clr);
+            line-height: 28px;
+        }
+
+        .hero-cont p {
+            font-family: var(--comforta);
+            color: var(--white-clr);
+            font-size: var(--font-14);
+            line-height: 21px;
+        }
+
+        .paragrapph {
+            font-size: var(--font-14);
+            line-height: 21px;
+        }
+
+        .ai-btn {
+            display: block;
+            margin-block: 1.5rem;
+            margin-inline: auto;
+            font-family: var(--inter);
+            font-size: var(--font-14);
+            font-weight: 600;
+            line-height: 21px;
+            padding: 14px 18px;
+            border-radius: 10px;
+            border: none;
+            color: var(--white-clr);
+            background-image: linear-gradient(to left, #CA6C5C, #492F92);
+        }
+
+        @media screen and (max-width: 800px) {
+            .mail-hero {
+                height: 310px;
+            }
+
+            .hero-bg {
+                height: 100%;
+                object-fit: fill;
+                display: block;
+            }
+
+            .hero-cont {
+                width: 80%;
+            }
+        }
+    </style>
+    <!-- style ends -->
+</head>
+<body>
+    <main class="all">
+        <div class="content-wrap">
+            <header><img src="images/Logo.png" class="ai-logo" alt=""></header>
+
+            <section class="mail-hero">
+                <img src="images/Image header.png" alt="" class="hero-bg">
+                <div class="hero-cont">
+                    <h1>Give us Feedback</h1>
+                    <p>We'd love to hear your thoughts</p>
+                </div>
+            </section>
+
+            <section class="content-body">
+                <p class="paragrapph"><span>Hi NAME,</span><br><br>We just wanted to see how you are liking the new ParagraphAI keyboard! <br><br>Being able to create, reply, and edit instantly from your mobile keyboard is something we’re proud to provide, but we’re an ambitious bunch, so we’d love to hear what you think!<br>We would appreciate any feedback you have on our new keyboard - it helps us focus on providing updates that are relevant to you! 😊</p>
+                <button class="ai-btn">Let us know what you’re thinking!</button>
+                <p class="paragrapph">We hope you continue to enjoy ParagraphAI  and we’re looking forward to continuing to give you exciting new innovations!<br><br>Happy (mobile) writing!<br><br><b>The ParagraphAI Team</b></p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
