@@ -7,7 +7,7 @@
     <!-- style begins -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
 
         :root {
             --inter: 'Inter', sans-serif;
@@ -15,6 +15,7 @@
             --font-20: 20px;
             --font-14: 14px;
             --white-clr: #FFFFFF;
+            --ai-line: #efefef;
             --ai-clr: #58409A;
         }
 
@@ -143,10 +144,9 @@
         .ai-btn {
             display: block;
             margin-block: 1.5rem;
-            /* margin-inline: auto; */
             font-family: var(--inter);
             font-size: var(--font-14);
-            font-weight: 600;
+            font-weight: 500;
             line-height: 21px;
             padding: 14px 18px;
             border-radius: 10px;
@@ -157,7 +157,7 @@
         }
 
         .line {
-            background-color: #D3D3D3;
+            background-color: var(--ai-line);
             height: 1px;
             width: 100%;
             margin-block: 2rem;
@@ -166,7 +166,6 @@
         .video-container {
             position: relative;
             margin-top: 24px;
-            /* min-height: 320px; */
         }
 
         .play-btn {
@@ -363,13 +362,12 @@
                 <p class="paragrapph aux"><span>Hi NAME,</span><br><br>Welcome to ParagraphAI! We’re thrilled to have you on board.<br><br>To help you get started quickly, we’ve put together a handful of helpful resources that will have you thinking visually in no time at all</p>
                 <div class="wrap-1">
                     <h2>Getting to know <span class="ai-clr">ParagraphAI</span></h2>
-                    <p class="paragrapph">atch this short video to get Whimsical experience off to a flying start.</p>
+                    <p class="paragrapph">Watch this short video to get Whimsical experience off to a flying start.</p>
                     <div class="video-container">
                         <img src="images/Rectangle 1.png" alt="video" width="100%">
                         <img class="play-btn" id="play-btn-1" src="images/Exclude.png" alt="play-button" width="80px">
                     </div>
                 </div>
-                <div class="line"></div>
                 <div class="wrap-1">
                     <h2>Dive into <span class="ai-clr">ParagraphAI</span></h2>
                     <p class="paragrapph">Watch this short video to get Whimsical experience off to a flying start.</p>
@@ -382,13 +380,13 @@
                 <div class="line"></div>
                 <div>
                     <h3>Get your <span class="ai-clr">bearings</span></h3>
-                    <p class="paragrapph">If you’re looking for deep-dive explainers, product updates, or want to learn how other users are collaborating in ParagraphAI, check out these <br><br>helpful links:</p>
+                    <p class="paragrapph">If you’re looking for deep-dive explainers, product updates, or want to learn how other users are collaborating in ParagraphAI, check out these <br>helpful links:</p>
                     <ul class="mail-list">
                         <li>Our detailed guide to <a target="_blank" href="#">getting started</a> in ParagraphAI. You'll also find lots of wonderful tips and tricks in our <a target="_blank" href="#">Help center</a>.</li>
                         <li>Follow <a target="_blank" href="#">@ParagraphAI</a> for the latest updates from our team.</li>
-                        <li>Join the ParagraphAI community and strike up a conversation with fellow <a target="_blank" href="#">ParagraphAI users</a>.</li>
+                        <li>Join the <a href="#" target="_blank">ParagraphAI community</a> and strike up a conversation with fellow ParagraphAI users.</li>
                     </ul>
-                    <p class="paragrapph">Our team is also on-hand and happy to help at any point. If you’re unsure about anything so far, write to us at help@ParagraphAI.com and we'll get right on it. <br><br> Sincerely, <br><br><b>The ParagraphAI Team</b></p>
+                    <p class="paragrapph">Our team is also on-hand and happy to help at any point. If you’re unsure about anything so far, write to us at <a href="#" target="_blank">help@ParagraphAI.com</a> and we'll get right on it. <br><br> Sincerely, <br><br><b>The ParagraphAI Team</b></p>
                 </div>    
             </section>
         </div>
