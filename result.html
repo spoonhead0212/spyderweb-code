@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>result page</title>
     <link rel="stylesheet" href="style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
@@ -212,7 +212,7 @@ body {
 }
 
 .tot-wrap {
-    background-image: url(images/Vector\ 4.png), url(images/Vector\ 5.png);
+    /* background-image: url(images/Vector\ 4\ \(1\).png), url(images/Vector\ 5\ \(1\).png); */
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
@@ -263,12 +263,12 @@ body {
 }
 </style>
 </head>
-
+</head>
 <body>
-    <main class="main-bg main-wrapper">
-        <section class="first-wrapper">
-            <div class="mid-wrap">
-                <div class="energy-wrap">
+    <main class="main-bg main-result">
+        <section class="result-section">
+            <div class="result-inside">
+                <div class="energy-wrap result-wrap">
                     <div class="logo-div">
                         <img src="images/Frame 78 (1).png" width="100%">
                     </div>
@@ -276,13 +276,42 @@ body {
                         <h3 class="h3-head">Energy saving calculator</h3>
                     </div>
                 </div>
-                <p class="para">Your hot water is?</p>
-                <button class="btn">Gas fired</button>
-                <button class="btn">Electrical</button>
+                <div class="result-tot">
+                    <div class="tot-wrap" id="total-wrap">
+                        <p class="total-result">30,000</p>
+                    </div>
+                    <p class="pot">Potential energy saving</p>
+                    <a href="/index.html" class="btn return">Return home</a>
+                </div>
             </div>
         </section>
     </main>
 
-    
+    <script>
+         const containerBox = document.getElementById('total-wrap');
+         const randomNumber = Math.trunc(Math.random() * 100);
+         console.log(randomNumber);
+         if (randomNumber <= 10) {
+            containerBox.style.backgroundImage = "url('images/Vector 4 (1).png'), url('images/Vector 5 (1).png')";
+         } else if (randomNumber > 10 && randomNumber <= 20) {
+            containerBox.style.backgroundImage = "url('images/Vector 4 (2).png'), url('images/Vector 5 (2).png')";
+         } else if (randomNumber > 20 && randomNumber <= 30) {
+            containerBox.style.backgroundImage = "url('images/Vector 4 (3).png'), url('images/Vector 5 (3).png')";
+         } else if (randomNumber > 30 && randomNumber <= 40) {
+            containerBox.style.backgroundImage = "url('images/Vector 4 (4).png'), url('images/Vector 5 (4).png')";
+         } else if (randomNumber > 40 && randomNumber <= 50) {
+            containerBox.style.backgroundImage = "url('images/Vector 4 (5).png'), url('images/Vector 5 (5).png')";
+         } else if (randomNumber > 50 && randomNumber <= 60) {
+            containerBox.style.backgroundImage = "url('images/Vector 4 (6).png'), url('images/Vector 5 (6).png')"
+         } else if (randomNumber > 60 && randomNumber <= 70) {
+            containerBox.style.backgroundImage = "url('images/Vector 4 (7).png'), url('images/Vector 5 (7).png')"
+         } else if (randomNumber > 70 && randomNumber <= 80) {
+            containerBox.style.backgroundImage = "url('images/Vector 4 (8).png'), url('images/Vector 5 (8).png')"
+         } else if (randomNumber > 80 && randomNumber <= 90) {
+            containerBox.style.backgroundImage = "url('images/Vector 4 (9).png'), url('images/Vector 5 (9).png')"
+         } else if (randomNumber > 90 && randomNumber <= 100) {
+            containerBox.style.backgroundImage = "url('images/Vector 4 (10).png'), url('images/Vector 5 (10).png')"
+         }
+    </script>
 </body>
 </html>
