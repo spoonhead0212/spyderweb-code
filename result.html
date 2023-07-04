@@ -222,6 +222,8 @@ body {
     border-radius: 40px;
     display: grid;
     place-items: center;
+    opacity: 0;
+    transition: 400ms ease-in;
 }
 
 .total-result {
@@ -238,6 +240,8 @@ body {
 .return {
     text-decoration: none;
     text-align: center;
+    opacity: 0;
+    transition: 400ms ease-in;
 }
 
 .pot {
@@ -246,6 +250,8 @@ body {
     line-height: 30.46px;
     margin-bottom: 1rem;
     color: #264860;
+    opacity: 0;
+    transition: 400ms ease-in;
 }
 
 @media screen and (max-width: 800px){
@@ -280,8 +286,8 @@ body {
                     <div class="tot-wrap" id="total-wrap">
                         <p class="total-result">30,000</p>
                     </div>
-                    <p class="pot">Potential energy saving</p>
-                    <a href="/index.html" class="btn return">Return home</a>
+                    <p class="pot" id="pot-energy">Potential energy saving</p>
+                    <a href="/index.html" class="btn return" id="ret-home">Return home</a>
                 </div>
             </div>
         </section>
@@ -312,6 +318,19 @@ body {
          } else if (randomNumber > 90 && randomNumber <= 100) {
             containerBox.style.backgroundImage = "url('images/Vector 4 (10).png'), url('images/Vector 5 (10).png')"
          }
+
+         const potentEnergy = document.getElementById('pot-energy');
+         const returnHomeBtn = document.getElementById('ret-home');
+         setTimeout(function() {
+            containerBox.style.opacity = 1;
+            setTimeout(function() {
+            potentEnergy.style.opacity = 1;
+            setTimeout(function() {
+                returnHomeBtn.style.opacity = 1;
+            }, 500); // Delay for the third action
+            }, 600); // Delay for the second action
+        }, 700); // 
+
     </script>
 </body>
 </html>

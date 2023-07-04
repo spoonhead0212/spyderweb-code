@@ -62,7 +62,7 @@ body {
 }
 
 .logo-div {
-    width: 88.88px
+    width: 88.88px;
 }
 
 .logo-div img{
@@ -82,9 +82,12 @@ body {
     color: var(--gray);
     text-align: center;
     margin-bottom: 1.8rem;
+    transition: 400ms ease-in;
+    opacity: 0;
 }
 
 .btn {
+    opacity: 0;
     display: block;
     width: 100%;
     font-family: var(--main-font);
@@ -97,6 +100,11 @@ body {
     border-radius: 40px;
     margin-bottom: 10px;
     cursor: pointer;
+}
+
+#hot-btn-1,
+#hot-btn-2 {
+    transition: 400ms ease-in;
 }
 
 .btn:hover {
@@ -276,13 +284,27 @@ body {
                         <h3 class="h3-head">Energy saving calculator</h3>
                     </div>
                 </div>
-                <p class="para">Your hot water is?</p>
-                <a href="result.html"><button class="btn">Gas fired</button></a>
-                <button class="btn">Electrical</button>
+                <p class="para" id="hot-para">Your hot water is?</p>
+                <button class="btn" id="hot-btn-1">Gas fired</button>
+                <button class="btn" id="hot-btn-2">Electrical</button>
             </div>
         </section>
     </main>
 
-    
+    <script>
+        const hotPara = document.getElementById('hot-para');
+        const hotBtnOne = document.getElementById('hot-btn-1');
+        const hotBtnTwo = document.getElementById('hot-btn-2');
+        document.getElementById('hot-btn-2');
+        setTimeout(function() {
+        hotPara.style.opacity = 1;
+        setTimeout(function() {
+          hotBtnOne.style.opacity = 1;
+          setTimeout(function() {
+              hotBtnTwo.style.opacity = 1;
+          }, 500); // Delay for the third action
+        }, 600); // Delay for the second action
+      }, 700); // 
+    </script>
 </body>
 </html>
