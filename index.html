@@ -6,11 +6,10 @@
     <title>Pro Tip</title>
     <!-- style begins -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600&display=swap');
 
         :root {
-            --inter: 'Inter', sans-serif;
+            --sans: 'DM sans' , sans-serif;
             --comforta: 'Comfortaa', cursive;
             --font-20: 20px;
             --font-14: 14px;
@@ -24,113 +23,294 @@
         }
 
         body {
-            font-family: var(--inter)
+            font-family: var(--sans);
         }
 
-        .content-body {
-            margin-top: 1rem;
+        .sup-hero {
             width: 100%;
-            padding-inline: 5px;
+            padding-top: 200px;
+            padding-bottom: 400px;
+            background-image: url(/images/891613_O928X90\ 1.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: grid;
+            place-items: center;
+        }
+
+        .hero-kid {
+            width: clamp(350px, 60vw, 726px);
+            text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 30px;
+            align-items: center;
         }
 
-        h2 {
-            font-family: var(--comforta);
-            font-size: var(--font-20);
-            line-height: 30px;
-            font-weight: 700;
-            text-align: center;
-            max-width: 75%;
-            margin-inline: auto;
+        .hero-kid img:nth-child(1) {
+            width: 80px;
         }
-
-        .clr-fix {
-            color: #58409A;
-        }
-
-        .content-body img {
-            margin-inline: auto;
-
-        }
-
-        .all {
-            width: 100vw;
-            padding-block: 2rem;
-            display: flex;
-            justify-content: center;
-        }
-
-        .content-wrap {
-            width: min(90%, 556px);
-        }
-
-        .ai-logo {
-            width: 157px;
-            padding-left: 5px;
-            display: inline-block;
-        }
-
-        .mail-hero {
-            margin: 2rem 0 1rem 0;
+        .hero-kid img:nth-child(2) {
             width: 100%;
+        }
+
+        .map-sec {
+            width: 100%;
+            padding-bottom: 150px;
+        }
+
+        .mapping {
+            width: clamp(360px, 75%, 800px);
+            margin-inline: auto;
+            transform: translateY(-250px);
+        }
+
+        .world {
+            box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+            border-radius: 0 0 60px 60px;
+        }
+
+        .bottom-para {
+            background-image: url(images/Rectangle\ 73.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 40px;
+            padding: 94px 80px;
+            text-align: center;
+            width: clamp(360px, 60vw, 726px);
+            margin-inline: auto;
+        }
+
+        .bottom-para p {
+            line-height: 25.55px;
+            font-size: 16px;
+            color: var(--white-clr);
+            font-weight: 500;
+        }
+
+        .bottom-btn {
+            padding: 16px 20px;
+            margin-top: 40px;
+            display: inline-block;
+            color: #264860;
+            font-family: DM Sans;
+            font-size: 14px;
+           font-style: normal;
+           font-weight: 500;
+           background-color: var(--white-clr);
+           text-decoration: none;
+           border-radius: 30px;
+           transition: 400ms ease;
+        }
+
+        .bottom-btn:hover {
+            background-color: transparent;
+            color: var(--white-clr);
+            outline: var(--white-clr) 2px solid;
+        }
+
+        /* mapping */
+        .mapping {
             position: relative;
         }
 
-        .mail-hero img {
-            width: 100%;
-            display: block;
+        .country-parent {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            outline: 2px solid #00A3DE;
+            border-radius: 50px;
+            display: grid;
+            place-items: center;
+            
+            animation-name: example;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
         }
 
-        .paragrapph {
-            color: #2C3747;
-            font-weight: 400;
-            line-height: 21px;
-            text-align: center;
-            width: min(90%, 428px);
-            margin-inline: auto;
-            font-size: var(--font-14);
+        .country-1 {
+            top: 38%;
+            left: 46%;
+        }
+        .country-2 {
+            top: 40%;
+            left: 53%;
+        }
+        .country-3 {
+            bottom: 39%;
+            right: 23%;
+        }
+        .country-4 {
+            bottom: 50.23%;
+            right: 38.19%;
         }
 
+        @keyframes example {
+            0% {
+                transform: scale(0);
+            }
 
-        .ai-btn {
-            display: inline-block;
-            margin-inline: auto;
-            width: 200px;
-            font-family: var(--inter);
-            font-size: var(--font-14);
-            font-weight: 500;
-            line-height: 21px;
-            padding: 14px 18px;
-            border-radius: 10px;
-            text-decoration: none;
-            text-align: center;
-            border: none;
-            color: var(--white-clr);
-            background-image: linear-gradient(to left, #CA6C5C, #492F92);
+            100% {
+                transform: scale(1);
+            }
         }
-    </style>
+
+        .country-child {
+            width: 8px;
+            height: 8px;
+            background-color: #00A3DE;
+            border-radius: 50px;
+        }
+        /* -- */
+        .nations img {
+            width: 120px;
+            position: absolute;
+            box-shadow: 0px 10px 15px -100px rgba(0,0,0,0.1);
+        }
+
+        .hidden {
+            transform: scale(0);
+            transition: transform ease 200ms;
+        }
+
+        .show-hidden {
+            transform: scale(1);
+        }
+
+        .nations img:nth-child(1) {
+            bottom: 42%;
+            right: 16%;
+        }
+        .nations img:nth-child(2) {
+            top: 28%;
+            left: 49%;
+        }
+        .nations img:nth-child(3) {
+            bottom: 53.23%;
+            right: 31.19%;
+        }
+        .nations img:nth-child(4) {
+            top: 25%;
+            left: 42%;
+        }
+
+        .bottom-para {
+            padding: 54px 20px;
+        }
+
+        .bottom-para p {
+            line-height: 2;
+        }
+
+        @media (max-width: 800px) {
+            .sup-hero {
+                padding-block: 200px;
+            }
+
+            .mapping {
+                transform: translateY(-60px);
+                min-height: 400px;
+                transform: translateY(-140px);
+            }
+
+            .world {
+                border-radius: 40px;
+                height: 400px;
+                object-fit: cover;
+            }
+        }
+    </style> 
     <!-- style ends -->
 </head>
 <body>
     <main class="all">
-        <div class="content-wrap">
-            <header><img src="https://userimg-assets.customeriomail.com/images/client-env-125050/1688123733080_Logo_01H4607XW14QV3AWSKWHMFJM9F.png" class="ai-logo" alt=""></header>
-
-            <section class="mail-hero">
-                <img src="images/Image.png" alt="" class="hero-bg">
-            </section>
-
-            <section class="content-body">
-                <h2>Use <span class="clr-fix">FIX</span> to instantly improve your messages in just one click.</h2>
-                <img src="images/paragrapgh-ai-gif (2).gif" alt="mail-gif" width="170px">
-                <p class="paragrapph para-one">Ready to give <span class="clr-fix">FIX</span> a try?
-                </p>
-                <a href="#" target="_blank" class="ai-btn">Go to ParagraphAI</a>
-                <p class="paragrapph">The best part? The 'Fix' button adapts to your writing style over time, making it a truly personalized tool.</p>
-            </section>
-        </div>
+        <section class="sup-hero">
+            <div class="hero-kid">
+                <img src="images/Frame.png" alt="">
+                <img src="images/Frame 241.png" alt="">
+                <!-- <p>Contact us via any of these means</p> -->
+            </div>
+        </section>
+        <section class="map-sec">
+            <div class="mapping">
+                <img src="images/Frame 154 (2).png" alt="map" width="100%" class="world">
+                <div class="country-parent country-1">
+                    <div class="country-child"></div>
+                </div>
+                <div class="country-parent country-2">
+                    <div class="country-child"></div>
+                </div>
+                <div class="country-parent country-3">
+                    <div class="country-child"></div>
+                </div>
+                <div class="country-parent country-4">
+                    <div class="country-child"></div>
+                </div>
+                <section class="nations">
+                    <img src="images/Group 804.png" alt="philippines flag" id="phili" class="hidden">
+                    <img src="images/Group 805.png" alt="greece flag" id="greece" class="hidden">
+                    <img src="images/Group 803.png" alt="uae flag" id="uae" class="hidden">
+                    <img src="images/Group 806.png" alt="spain flag" id="spain" class="hidden">
+                </section>
+            </div>
+            <div class="bottom-para">
+                <p>Our business model and comprehensive ESG (Environmental, Social, and Governance) initiative are designed to be adaptable and applicable to real estate owners worldwide. Whether you operate in Asia, Europe, the Americas, or any other region, our solutions can be tailored to meet your specific needs. If you share our goals and believe in the value of our offerings, we would be delighted to collaborate with you. Feel free to reach out to us, and we will gladly explore how Clear Solutions can be implemented in your region, bringing our expertise and support to help you achieve your objectives.</p>
+                <a href="#" class="bottom-btn">Become a Clear Partner</a>
+            </div>
+        </section>
     </main>
+    <script>
+        const countryFlags = document.querySelectorAll('.country-parent')
+        const spain = document.getElementById('spain')
+        const greece = document.getElementById('greece')
+        const phili = document.getElementById('phili')
+        const uae = document.getElementById('uae')
+        
+        const globalOne = function(element) {
+            element.classList.add('show-hidden')
+        }
+        const globalTwo = function(element) {
+            element.classList.remove('show-hidden')
+        }
+
+        countryFlags[0].addEventListener('mouseover', function(){
+            globalOne(spain)
+            
+        })
+        countryFlags[0].addEventListener('mouseout', function(){
+            globalTwo(spain)
+        })
+
+        countryFlags[1].addEventListener('mouseover', function(){
+            globalOne(greece)
+            
+        })
+        countryFlags[1].addEventListener('mouseout', function(){
+            globalTwo(greece)
+        })
+
+        countryFlags[2].addEventListener('mouseover', function(){
+            globalOne(phili)
+            
+        })
+        countryFlags[2].addEventListener('mouseout', function(){
+            globalTwo(phili)
+        })
+
+        countryFlags[3].addEventListener('mouseover', function(){
+            globalOne(uae)
+            
+        })
+        countryFlags[3].addEventListener('mouseout', function(){
+            globalTwo(uae)
+        })
+
+        
+
+        
+
+        
+    </script>
 </body>
 </html> 
