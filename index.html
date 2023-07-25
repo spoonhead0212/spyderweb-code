@@ -6,15 +6,6 @@
     <title>Pro Tip</title>
     <!-- style begins -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600&display=swap');
-
-        :root {
-            --sans: 'DM sans' , sans-serif;
-            --comforta: 'Comfortaa', cursive;
-            --font-20: 20px;
-            --font-14: 14px;
-            --white-clr: #FFFFFF;
-        }
 
         * {
             box-sizing: border-box;
@@ -22,295 +13,112 @@
             padding: 0;
         }
 
-        body {
-            font-family: var(--sans);
-        }
-
-        .sup-hero {
-            width: 100%;
-            padding-top: 200px;
-            padding-bottom: 400px;
-            background-image: url(/images/891613_O928X90\ 1.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            display: grid;
-            place-items: center;
-        }
-
-        .hero-kid {
-            width: clamp(350px, 60vw, 726px);
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .hero-kid img:nth-child(1) {
-            width: 80px;
-        }
-        .hero-kid img:nth-child(2) {
-            width: 100%;
-        }
-
-        .map-sec {
-            width: 100%;
-            padding-bottom: 150px;
-        }
-
-        .mapping {
-            width: clamp(360px, 75%, 1100px);
-            margin-inline: auto;
-            transform: translateY(-250px);
-        }
-
         .world {
-            box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
-            border-radius: 0 0 60px 60px;
-        }
-
-        .bottom-para {
-            background-image: url(images/Rectangle\ 73.png);
+            height: 100vh;
+            width: 100%;
+            background-image: url(images/Artboard\ 1@4x.png);
+            background-color: #222427;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            border-radius: 40px;
-            padding: 94px 80px;
-            text-align: center;
-            width: clamp(360px, 75vw, 1100px);
-            margin-inline: auto;
-        }
-
-        .bottom-para p {
-            line-height: 25.55px;
-            font-size: 16px;
-            color: var(--white-clr);
-            font-weight: 500;
-        }
-
-        .bottom-btn {
-            padding: 16px 20px;
-            margin-top: 40px;
-            display: inline-block;
-            color: #264860;
-            font-family: DM Sans;
-            font-size: 14px;
-           font-style: normal;
-           font-weight: 500;
-           background-color: var(--white-clr);
-           text-decoration: none;
-           border-radius: 30px;
-           transition: 400ms ease;
-        }
-
-        .bottom-btn:hover {
-            background-color: transparent;
-            color: var(--white-clr);
-            outline: var(--white-clr) 2px solid;
-        }
-
-        /* mapping */
-        .mapping {
             position: relative;
+            background-color: #222427;
         }
 
-        .country-parent {
-            position: absolute;
-            width: 14px;
-            height: 14px;
-            outline: 2px solid #00A3DE;
-            border-radius: 50px;
-            display: grid;
-            place-items: center;
-            
-            animation-name: example;
-            animation-duration: 1.5s;
-            animation-iteration-count: infinite;
-        }
-
-        .country-1 {
-            top: 38%;
-            left: 46%;
-        }
-        .country-2 {
-            top: 40%;
-            left: 53%;
-        }
-        .country-3 {
-            bottom: 39%;
-            right: 23%;
-        }
-        .country-4 {
-            bottom: 50.23%;
-            right: 38.19%;
-        }
-
-        @keyframes example {
-            0% {
-                transform: scale(0);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        .country-child {
-            width: 8px;
-            height: 8px;
-            background-color: #00A3DE;
-            border-radius: 50px;
-        }
-        /* -- */
-        .nations img {
-            width: 120px;
-            position: absolute;
-            box-shadow: 0px 10px 15px -100px rgba(0,0,0,0.1);
-        }
-
-        .hidden {
+        .flag {
             transform: scale(0);
-            transition: transform ease 200ms;
         }
 
-        .show-hidden {
-            transform: scale(1);
+        .flag {
+            width: 80px;
+            position: absolute;
         }
 
-        .nations img:nth-child(1) {
-            bottom: 42%;
-            right: 16%;
+        @keyframes all-animate {
+            0% { transform: scale(0); }
+            10% { transform: scale(0); }
+            50% { transform: scale(1); }
+            100% { transform: scale(0);}
         }
-        .nations img:nth-child(2) {
-            top: 28%;
-            left: 49%;
+
+        #canada {
+            top: 10%;
+            left: 19%;
+            animation: all-animate 5s infinite ;
+
         }
-        .nations img:nth-child(3) {
-            bottom: 53.23%;
-            right: 31.19%;
+        #usa {
+            top: 33%;
+            left: 15%;
+            animation: all-animate 5s infinite 1s;
         }
-        .nations img:nth-child(4) {
-            top: 25%;
+        #uk {
+            top: 24%;
+            left: 42%;
+            animation: all-animate 5s infinite 2s;
+        }
+        #aus {
+            bottom: 12%;
+            right: 13%;
+            animation: all-animate 5s infinite 3s;
+        }
+
+        .mob-bg {
+            display: none;
+            width: 100%;
+            height: 100vh;
+        }
+
+        @media screen and (max-width: 500px) {
+            .world {
+                background-image: none;
+                min-height: 1500px;
+                background-color: #222427;
+                min-height: 400px;
+            }
+
+            .world > .mob-bg {
+                display: block;
+                width: 100%;
+            }
+
+            #canada {
+            top: 24%;
+            left: 10%;
+        }
+        #usa {
+            top: 33%;
+            left: 8%;
+        }
+        #uk {
+            top: 38%;
             left: 42%;
         }
-
-        .bottom-para {
-            padding: 54px 20px;
+        #aus {
+            bottom: 20%;
+            right: 5%;
         }
 
-        .bottom-para p {
-            line-height: 2;
-        }
 
-        @media (max-width: 800px) {
-            .sup-hero {
-                padding-block: 200px;
-            }
-
-            .mapping {
-                transform: translateY(-60px);
-                min-height: 400px;
-                transform: translateY(-140px);
-            }
-
-            .world {
-                border-radius: 40px;
-                height: 400px;
-                object-fit: cover;
-            }
         }
     </style> 
     <!-- style ends -->
 </head>
 <body>
-    <main class="all">
-        <section class="sup-hero">
-            <div class="hero-kid">
-                <img src="images/Frame.png" alt="">
-                <img src="images/Frame 241.png" alt="">
-                <!-- <p>Contact us via any of these means</p> -->
-            </div>
-        </section>
-        <section class="map-sec">
-            <div class="mapping">
-                <img src="images/Frame 154 (2).png" alt="map" width="100%" class="world">
-                <div class="country-parent country-1">
-                    <div class="country-child"></div>
-                </div>
-                <div class="country-parent country-2">
-                    <div class="country-child"></div>
-                </div>
-                <div class="country-parent country-3">
-                    <div class="country-child"></div>
-                </div>
-                <div class="country-parent country-4">
-                    <div class="country-child"></div>
-                </div>
-                <section class="nations">
-                    <img src="images/Group 804.png" alt="philippines flag" id="phili" class="hidden">
-                    <img src="images/Group 805.png" alt="greece flag" id="greece" class="hidden">
-                    <img src="images/Group 803.png" alt="uae flag" id="uae" class="hidden">
-                    <img src="images/Group 806.png" alt="spain flag" id="spain" class="hidden">
-                </section>
-            </div>
-            <div class="bottom-para">
-                <p>Our business model and comprehensive ESG (Environmental, Social, and Governance) initiative are designed to be adaptable and applicable to real estate owners worldwide. Whether you operate in Asia, Europe, the Americas, or any other region, our solutions can be tailored to meet your specific needs. If you share our goals and believe in the value of our offerings, we would be delighted to collaborate with you. Feel free to reach out to us, and we will gladly explore how Clear Solutions can be implemented in your region, bringing our expertise and support to help you achieve your objectives.</p>
-                <a href="#" class="bottom-btn">Become a Clear Partner</a>
-            </div>
-        </section>
-    </main>
+    
+    <section class="world">
+        <img src="images/Artboard 1@4x.png" alt="" class="mob-bg">
+        <img src="images/canada.png" alt="canada" class="flag" id="canada">
+        <img src="images/united-states.png" alt="united-states" class="flag" id="usa">
+        <img src="images/united-kingdom.png" alt="united-kingdom" class="flag" id="uk">
+        <img src="images/australia.png" alt="australia" class="flag" id="aus">
+    </section>
+
     <script>
-        const countryFlags = document.querySelectorAll('.country-parent')
-        const spain = document.getElementById('spain')
-        const greece = document.getElementById('greece')
-        const phili = document.getElementById('phili')
-        const uae = document.getElementById('uae')
-        
-        const globalOne = function(element) {
-            element.classList.add('show-hidden')
-        }
-        const globalTwo = function(element) {
-            element.classList.remove('show-hidden')
-        }
-
-        countryFlags[0].addEventListener('mouseover', function(){
-            globalOne(spain)
-            
-        })
-        countryFlags[0].addEventListener('mouseout', function(){
-            globalTwo(spain)
-        })
-
-        countryFlags[1].addEventListener('mouseover', function(){
-            globalOne(greece)
-            
-        })
-        countryFlags[1].addEventListener('mouseout', function(){
-            globalTwo(greece)
-        })
-
-        countryFlags[2].addEventListener('mouseover', function(){
-            globalOne(phili)
-            
-        })
-        countryFlags[2].addEventListener('mouseout', function(){
-            globalTwo(phili)
-        })
-
-        countryFlags[3].addEventListener('mouseover', function(){
-            globalOne(uae)
-            
-        })
-        countryFlags[3].addEventListener('mouseout', function(){
-            globalTwo(uae)
-        })
-
-        
-
-        
-
-        
+        // const canada = document.getElementById('')
+        // setTimeout(() => {
+        //     canada.classList.add(".show")
+        // }, 500);
     </script>
 </body>
 </html> 
