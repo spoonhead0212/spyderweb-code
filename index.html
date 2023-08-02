@@ -5,7 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pro Tip</title>
     <!-- style begins -->
+    
+    <!-- style ends -->
+</head>
+<body>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&display=swap');
+
+        :root {
+            --paragraph-font: 'Inter', sans-serif;
+            --header-font: 'DM Sans', sans-serif;
+            --paragraph-line: 14px;
+            --header-line: 24px;
+            --color: #44308C;
+        }
 
         * {
             box-sizing: border-box;
@@ -13,112 +27,89 @@
             padding: 0;
         }
 
-        .world {
-            height: 100vh;
+        h2 {
+            font-family: var(--header-font);
+            line-height: 36px;
+            color: var(--color);
+        }
+
+        p {
+            font-family: var(--paragraph-font);
+            line-height: 21px;
+        }
+
+        main {
+            padding-block: 2rem;
             width: 100%;
-            background-image: url(images/Artboard\ 1@4x.png);
-            background-color: #222427;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: relative;
-            background-color: #222427;
+            display: flex;
+            justify-content: center;
         }
 
-        .flag {
-            transform: scale(0);
+        .mail-body {
+            width: clamp(350px, 60%, 600px);
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
         }
 
-        .flag {
-            width: 80px;
-            position: absolute;
+        audio {
+            margin-block: 1.5rem;
         }
 
-        @keyframes all-animate {
-            0% { transform: scale(0); }
-            10% { transform: scale(0); }
-            50% { transform: scale(1); }
-            100% { transform: scale(0);}
+        .voice-note::-webkit-media-controls-play-button {
+            background-color: lightblue;
+            border-radius: 50%;
+            outline: var(--color) 2px solid;
         }
 
-        #canada {
-            top: 10%;
-            left: 19%;
-            animation: all-animate 5s infinite ;
-
-        }
-        #usa {
-            top: 33%;
-            left: 15%;
-            animation: all-animate 5s infinite 1s;
-        }
-        #uk {
-            top: 24%;
-            left: 42%;
-            animation: all-animate 5s infinite 2s;
-        }
-        #aus {
-            bottom: 12%;
-            right: 13%;
-            animation: all-animate 5s infinite 3s;
+        .voice-note::-webkit-media-controls-panel {
+            background-color: #d2b7e5;
         }
 
-        .mob-bg {
-            display: none;
-            width: 100%;
-            height: 100vh;
+        /* .voice-note::-webkit-media-controls-volume-slider {
+            /* background-color: lightblue; 
+            border-radius: 40px;
+        } */
+
+        .voice-note::-webkit-media-controls-timeline {
+            background-color: lightblue;
+            border-radius: 40px;
+            padding: 7px;
+            margin-inline: 10px;
         }
 
-        @media screen and (max-width: 500px) {
-            .world {
-                background-image: none;
-                min-height: 1500px;
-                background-color: #222427;
-                min-height: 400px;
-            }
+        .voice-note::-webkit-media-controls-time-remaining-display {
+            color: var(--color);
+        }
 
-            .world > .mob-bg {
-                display: block;
-                width: 100%;
-            }
-
-            #canada {
-            top: 24%;
-            left: 10%;
-        }
-        #usa {
-            top: 33%;
-            left: 8%;
-        }
-        #uk {
-            top: 38%;
-            left: 42%;
-        }
-        #aus {
-            bottom: 20%;
-            right: 5%;
+        .voice-note::-webkit-media-controls-mute-button {
+            background-color: lightblue;
+            border-radius: 50%;
         }
 
 
-        }
     </style> 
-    <!-- style ends -->
-</head>
-<body>
-    
-    <section class="world">
-        <img src="images/Artboard 1@4x.png" alt="" class="mob-bg">
-        <img src="images/canada.png" alt="canada" class="flag" id="canada">
-        <img src="images/united-states.png" alt="united-states" class="flag" id="usa">
-        <img src="images/united-kingdom.png" alt="united-kingdom" class="flag" id="uk">
-        <img src="images/australia.png" alt="australia" class="flag" id="aus">
-    </section>
 
-    <script>
-        // const canada = document.getElementById('')
-        // setTimeout(() => {
-        //     canada.classList.add(".show")
-        // }, 500);
-    </script>
+    <main>
+        <section class="mail-body">
+            <div class="header">
+                <img src="images/Group 1000002138.png" alt="Eulav logo" width="105.71px">
+            </div>
+            <img src="images/Image.png" alt="hero" class="hero" width="100%">
+            <div class="art">
+                <h2>Why Escrow? Why Eulav?</h2>
+                <audio controls preload="metadata" class="voice-note">
+                    <source src="images/Murvlana (feat. Tay Iwar) __ NaijaTunez.com.mp3" type="audio/ogg">
+                </audio>
+                <p>What's good <span>Chika</span>? <br><br>
+                    You may ask, what exactly is an escrow? And trust me you're not the only one on this table.<br><br>
+                    Escrow is all about transparency and security! When you opt for an escrow service, you gain total control over your transactions. Think of it as having a safety net during high-wire acts, minus the pressure! 🎢 <br><br>
+                    Trust is the heartbeat of any successful transaction, and that's where Eulav shines! 💖 We act as your impartial ally, ensuring both parties play fair. No more fretting over fraudsters - we've got your back! 🛡️ <br><br>
+                    You're never alone - we're in this together!<br><br>
+                    Warm regards,<br>
+                    Dolly, your friend from Eulav.</p>
+            </div>
+        </section>
+    </main>
 </body>
 </html> 
